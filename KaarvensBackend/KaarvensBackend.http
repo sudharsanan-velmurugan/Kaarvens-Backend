@@ -1,0 +1,6 @@
+@KaarvensBackend_HostAddress = http://localhost:5109
+
+GET {{KaarvensBackend_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

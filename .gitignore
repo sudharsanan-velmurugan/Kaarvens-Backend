@@ -1,0 +1,10 @@
+
+*.config
+*.txt
+*.v2
+*.vsidx
+*.json
+*.dll
+*.exe
+*.pdb
+*.cache

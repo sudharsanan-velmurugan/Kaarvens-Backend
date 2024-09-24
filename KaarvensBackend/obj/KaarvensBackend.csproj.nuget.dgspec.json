@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\github\\.NET-Learnings\\KV Backend Web API\\KaarvensBackend\\KaarvensBackend\\KaarvensBackend.csproj": {}
+    "D:\\github\\Kaarvens-Backend\\KaarvensBackend\\KaarvensBackend.csproj": {}
   },
   "projects": {
-    "D:\\github\\.NET-Learnings\\KV Backend Web API\\KaarvensBackend\\KaarvensBackend\\KaarvensBackend.csproj": {
+    "D:\\github\\Kaarvens-Backend\\KaarvensBackend\\KaarvensBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\github\\.NET-Learnings\\KV Backend Web API\\KaarvensBackend\\KaarvensBackend\\KaarvensBackend.csproj",
+        "projectUniqueName": "D:\\github\\Kaarvens-Backend\\KaarvensBackend\\KaarvensBackend.csproj",
         "projectName": "KaarvensBackend",
-        "projectPath": "D:\\github\\.NET-Learnings\\KV Backend Web API\\KaarvensBackend\\KaarvensBackend\\KaarvensBackend.csproj",
+        "projectPath": "D:\\github\\Kaarvens-Backend\\KaarvensBackend\\KaarvensBackend.csproj",
         "packagesPath": "C:\\Users\\VEGETA\\.nuget\\packages\\",
-        "outputPath": "D:\\github\\.NET-Learnings\\KV Backend Web API\\KaarvensBackend\\KaarvensBackend\\obj\\",
+        "outputPath": "D:\\github\\Kaarvens-Backend\\KaarvensBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

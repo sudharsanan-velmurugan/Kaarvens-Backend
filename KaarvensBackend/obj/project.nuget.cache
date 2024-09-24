@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "dG7HlQYc4Ss=",
+  "dgSpecHash": "jQNJkCG1Cx4=",
   "success": true,
-  "projectFilePath": "D:\\github\\.NET-Learnings\\KV Backend Web API\\KaarvensBackend\\KaarvensBackend\\KaarvensBackend.csproj",
+  "projectFilePath": "D:\\github\\Kaarvens-Backend\\KaarvensBackend\\KaarvensBackend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\VEGETA\\.nuget\\packages\\automapper\\12.0.1\\automapper.12.0.1.nupkg.sha512",
     "C:\\Users\\VEGETA\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.1\\automapper.extensions.microsoft.dependencyinjection.12.0.1.nupkg.sha512",

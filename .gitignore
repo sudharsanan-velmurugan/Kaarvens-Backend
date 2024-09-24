@@ -8,3 +8,5 @@
 *.exe
 *.pdb
 *.cache
+*.bin
+/.vs/KaarvensBackend/v17

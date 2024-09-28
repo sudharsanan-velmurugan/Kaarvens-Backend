@@ -24,6 +24,16 @@ namespace KaarvensBackend.Controllers
             return Ok(userDetails);
 
         }
+
+
+        [HttpGet]
+        [Route("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            var userDetail = await _db.UserDetails.FirstOrDefaultAsync(x => x.Id == id);
+            return Ok(userDetail);
+
+        }
         [HttpPost]
         public async Task<IActionResult> Post(UserDetails user)
         {
@@ -35,11 +45,29 @@ namespace KaarvensBackend.Controllers
         [HttpPut]
         public async Task<IActionResult> Put(UserDetails userDetails)
         {
-            var updateProject = _mapper.Map<ProjectDetails>(projectDetailsDto);
-            _context.ProjectDetails.Update(updateProject);
-            await _context.SaveChangesAsync();
-            return Ok(updateProject);
+            var updateUser = await _db.UserDetails.FindAsync(userDetails.Id);
+            if(updateUser == null)
+            {
+                return NotFound();
+            }
 
+            updateUser.Id = userDetails.Id;
+            updateUser.FirstName = userDetails.FirstName;
+            updateUser.LastName = userDetails.LastName;
+            updateUser.Email = userDetails.Email;
+            updateUser.MobileNo = userDetails.MobileNo;
+            await _db.SaveChangesAsync();
+            return Ok(updateUser);
+
+        }
+        [HttpDelete]
+        [Route("{id}")]
+        public async Task<IActionResult> Delete(int id)
+        {
+            var user = await _db.UserDetails.FirstOrDefaultAsync(x => x.Id == id);
+            _db.UserDetails.Remove(user);
+            await _db.SaveChangesAsync();
+            return NoContent();
         }
     }
 }

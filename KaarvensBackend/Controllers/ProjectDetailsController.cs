@@ -46,29 +46,6 @@ namespace KaarvensBackend.Controllers
 
         }
 
-
-        //private ProjectDetails MapProjectObject(ProjectDetailsDto projectDetailsDto)
-        //{
-        //    var result = new ProjectDetails();
-        //    result.JobNo= projectDetailsDto.JobNo;
-        //    result.ProjectName= projectDetailsDto.ProjectName;
-        //    result.ArchitectName= projectDetailsDto.ArchitectName;
-        //    result.SiteLocation= projectDetailsDto.SiteLocation;
-        //    result.DrawingDetails = new List<DrawingDetails>();
-
-        //    foreach (var item in projectDetailsDto.DrawingDetails)
-        //    {
-        //        var newDrawingDetails = new DrawingDetails();
-        //        newDrawingDetails.DrawingStatus= item.DrawingStatus;
-        //        newDrawingDetails.DrawingName   = item.DrawingName;
-        //        newDrawingDetails.Revision= item.Revision;
-        //        result.DrawingDetails.Add(newDrawingDetails);
-        //    }
-
-        //    return result;
-        //}
-
-
         [HttpPost]
         public async Task<IActionResult> Post(ProjectDetailsDto projectDetailsDto)
         {

@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using KaarvensBackend.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace KaarvensBackend.Database
 {
@@ -14,12 +15,18 @@ namespace KaarvensBackend.Database
 
         public DbSet<DrawingDetails> DrawingsDetails { get; set; }
 
+        public DbSet<UserDetails> UserDetails { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DrawingDetails>()
                 .HasOne(_ => _.ProjectDetails)
                 .WithMany(_ => _.DrawingDetails)
                 .HasForeignKey(_ => _.ProjectDetailsId);
+
+            modelBuilder.Entity<UserDetails>()
+                .HasIndex(u => u.Email)
+                .IsUnique();
+
         }
     }
 }

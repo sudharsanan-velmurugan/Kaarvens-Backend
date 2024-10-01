@@ -10,17 +10,17 @@ public class ProjectDetails
     [Key]
     public int Id { get; set; }
 
-    [Required, MaxLength(300), Column(TypeName = "nvarchar(300)")]
-    public string JobNo { get; set; }
+    [Required]
+    public string JobNo { get; set; } = string.Empty;
 
-    [Required, MaxLength(300), Column(TypeName = "nvarchar(300)")]
-    public string ProjectName { get; set; }
-
-    [Required, MaxLength(300), Column(TypeName = "nvarchar(300)")]
-    public string ArchitectName { get; set; }
-
-    [MaxLength(300), Column(TypeName = "nvarchar(300)")]
-    public string SiteLocation { get; set; }
+    [Required]
+    public string ProjectName { get; set; } = string.Empty;
+   
+    [Required]
+    public string ArchitectName { get; set; } = string.Empty;
+   
+    [Required]
+    public string SiteLocation { get; set; } = string.Empty;
 
     // Navigation Property - One Project can have many Drawings
     public List<DrawingDetails> DrawingDetails { get; set; }
@@ -32,14 +32,14 @@ public class DrawingDetails
     [Key]
     public int DrawingId { get; set; }
 
-    [MaxLength(300), Column(TypeName = "nvarchar(300)")]
-    public string DrawingName { get; set; }
+    [Required]
+    public string DrawingName { get; set; } = string.Empty;
 
-    [MaxLength(100), Column(TypeName = "nvarchar(100)")]
-    public string DrawingStatus { get; set; }
+    [Required]
+    public string DrawingStatus { get; set; } = string.Empty;
 
-    [MaxLength(10), Column(TypeName = "nvarchar(10)")]
-    public string Revision { get; set; }
+    [Required]
+    public string Revision { get; set; } = string.Empty;
 
     // Foreign Key relationship to ProjectDetails
     public int ProjectDetailsId { get; set; }

@@ -39,7 +39,7 @@ namespace KaarvensBackend.Controllers
         {
             _db.UserDetails.Add(user);
             await _db.SaveChangesAsync();
-            return Created($"{user.Id}",user);
+            return Created($"/UserDetails/{user.Id}",user);
 
         }
         [HttpPut]
@@ -65,6 +65,10 @@ namespace KaarvensBackend.Controllers
         public async Task<IActionResult> Delete(int id)
         {
             var user = await _db.UserDetails.FirstOrDefaultAsync(x => x.Id == id);
+            if(user == null)
+            {
+                return NotFound();
+            }
             _db.UserDetails.Remove(user);
             await _db.SaveChangesAsync();
             return NoContent();

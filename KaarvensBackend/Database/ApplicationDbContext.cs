@@ -18,6 +18,7 @@ namespace KaarvensBackend.Database
         public DbSet<UserDetails> UserDetails { get; set; }
 
         public DbSet<TaskDetails> TaskDetails { get; set; }
+        public DbSet<FinanceDetails> FinanceDetails { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.Entity<DrawingDetails>()

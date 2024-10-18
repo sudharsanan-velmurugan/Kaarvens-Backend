@@ -52,6 +52,31 @@ namespace KaarvensBackend.Migrations
                     b.ToTable("DrawingsDetails");
                 });
 
+            modelBuilder.Entity("KaarvensBackend.Models.FinanceDetails", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Comments")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ProjectName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Status")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("FinanceDetails");
+                });
+
             modelBuilder.Entity("KaarvensBackend.Models.TaskDetails", b =>
                 {
                     b.Property<int>("TaskId")

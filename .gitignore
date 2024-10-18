@@ -11,3 +11,7 @@
 *.bin
 /.vs/KaarvensBackend/v17
 *.cs
+*.props
+*.json
+*.cache
+.vs/KaarvensBackend/v17/.suo

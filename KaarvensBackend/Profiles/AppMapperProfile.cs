@@ -10,6 +10,7 @@ namespace KaarvensBackend.Profiles
         /// </summary>
         public AppMapperProfile()
         {
+            //for post method
             CreateMap<ProjectDetailsDto, ProjectDetails>();
             CreateMap<DrawingDetailsDto, DrawingDetails>();
         }

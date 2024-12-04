@@ -7,11 +7,10 @@ using KaarvensBackend.Database;
 using KaarvensBackend.DTOS;
 using Microsoft.AspNetCore.Http.HttpResults;
 using AutoMapper;
-using Microsoft.AspNetCore.Components;
 
 namespace KaarvensBackend.Controllers
 {
-    [Microsoft.AspNetCore.Mvc.Route("api/[controller]")]
+    [Route("api/[controller]")]
     [ApiController]
     public class ProjectDetailsController : ControllerBase
     {
@@ -34,7 +33,7 @@ namespace KaarvensBackend.Controllers
 
         }
         [HttpGet]
-        [Microsoft.AspNetCore.Mvc.Route("{id}")]
+        [Route("{id}")]
         public async Task<IActionResult> Get(int id)
         {
             var projectDetails = await _context.ProjectDetails
@@ -64,7 +63,7 @@ namespace KaarvensBackend.Controllers
 
         }
         [HttpDelete]
-        [Microsoft.AspNetCore.Mvc.Route("{id:int}")]
+        [Route("{id:int}")]
         public async Task<IActionResult>Delete(int id)
         {
             var projectToDelete = await _context.ProjectDetails.Include(_ => _.DrawingDetails)

@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("KaarvensBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+deb8434e6533923467ae06ad34f80c73675660c4")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+83da6cffc5bf323baf7dcb9e67497d7cf39f558f")]
 [assembly: System.Reflection.AssemblyProductAttribute("KaarvensBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("KaarvensBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

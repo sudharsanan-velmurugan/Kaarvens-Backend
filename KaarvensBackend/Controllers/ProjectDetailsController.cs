@@ -22,6 +22,11 @@ namespace KaarvensBackend.Controllers
             _context = context;
             _mapper = mapper;
         }
+
+        /// <summary>
+        /// Retrieves a list of all project details, including their associated drawing details.
+        /// </summary>
+        /// <returns>Returns a list of all project details.</returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {

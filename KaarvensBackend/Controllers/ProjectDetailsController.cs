@@ -49,6 +49,11 @@ namespace KaarvensBackend.Controllers
             return Ok(projectDetails);
 
         }
+        // <summary>
+        /// Creates a new project detail from the provided DTO.
+        /// </summary>
+        /// <param name="projectDetailsDto">The DTO containing project detail information.</param>
+        /// <returns>Returns the created project detail with a 201 Created status.</returns>
 
         [HttpPost]
         public async Task<IActionResult> Post(ProjectDetailsDto projectDetailsDto)

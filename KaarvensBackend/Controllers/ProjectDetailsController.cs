@@ -63,6 +63,12 @@ namespace KaarvensBackend.Controllers
             await _context.SaveChangesAsync();
             return Created($"/ProjectDetaills/{result.Id}",result);
         }
+
+        /// <summary>
+        /// Updates an existing project detail with the data from the provided DTO.
+        /// </summary>
+        /// <param name="projectDetailsDto">The DTO containing updated project detail information.</param>
+        /// <returns>Returns the updated project detail with a 200 OK status.</returns>
         [HttpPut]
         public async Task<IActionResult>Put (ProjectDetailsDto projectDetailsDto)
         {

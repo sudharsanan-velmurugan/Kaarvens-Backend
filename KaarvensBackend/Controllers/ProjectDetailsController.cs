@@ -78,6 +78,12 @@ namespace KaarvensBackend.Controllers
             return Ok(updateProject);
 
         }
+
+        /// <summary>
+        /// Deletes a specific project detail by its ID.
+        /// </summary>
+        /// <param name="id">The ID of the project detail to delete.</param>
+        /// <returns>Returns a 204 No Content status if the project detail is successfully deleted, or 404 Not Found if it doesn't exist.</returns>
         [HttpDelete]
         [Route("{id:int}")]
         public async Task<IActionResult>Delete(int id)

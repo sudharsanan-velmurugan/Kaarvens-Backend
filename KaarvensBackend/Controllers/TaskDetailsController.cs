@@ -41,6 +41,12 @@ namespace KaarvensBackend.Controllers
             var taskDetail = await _db.TaskDetails.FirstOrDefaultAsync(x=>x.TaskId== id);
             return Ok(taskDetail);
         }
+
+        /// <summary>
+        /// Creates a new task detail.
+        /// </summary>
+        /// <param name="taskDetails">The task detail object to be created.</param>
+        /// <returns>Returns the created task detail with an HTTP 201 Created status.</returns>
         [HttpPost]
         public async Task<IActionResult>Post(TaskDetails taskDetails)
         {

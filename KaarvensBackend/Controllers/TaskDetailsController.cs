@@ -55,6 +55,11 @@ namespace KaarvensBackend.Controllers
             return Created($"/TaskDetails/{taskDetails.TaskId}", taskDetails);
         }
 
+        /// <summary>
+        /// Updates an existing task detail.
+        /// </summary>
+        /// <param name="taskDetails">The task detail object with updated data.</param>
+        /// <returns>Returns the updated task detail with an HTTP 200 OK status, or HTTP 404 Not Found if the task doesn't exist.</returns>
         [HttpPut]
         public async Task<IActionResult> Put (TaskDetails taskDetails)
         {
@@ -78,6 +83,11 @@ namespace KaarvensBackend.Controllers
 
         }
 
+        /// <summary>
+        /// Deletes a specific task detail by its TaskId.
+        /// </summary>
+        /// <param name="id">The ID of the task to delete.</param>
+        /// <returns>Returns an HTTP 204 No Content status if successful, or HTTP 404 Not Found if the task doesn't exist.</returns>
         [HttpDelete]
 
         public async Task<IActionResult>Delete(int id)

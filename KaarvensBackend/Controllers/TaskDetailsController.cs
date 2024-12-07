@@ -17,6 +17,10 @@ namespace KaarvensBackend.Controllers
             _db = context;
         }
 
+        /// <summary>
+        /// Retrieves a list of all task details.
+        /// </summary>
+        /// <returns>Returns an HTTP 200 OK status with a list of all task details.</returns>
         [HttpGet]
         public async Task<IActionResult> Get()
         {

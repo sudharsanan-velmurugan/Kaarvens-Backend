@@ -28,6 +28,11 @@ namespace KaarvensBackend.Controllers
 
             return Ok(result);
         }
+        /// <summary>
+        /// Retrieves a specific task detail by its TaskId.
+        /// </summary>
+        /// <param name="id">The ID of the task to retrieve.</param>
+        /// <returns>Returns the task detail if found, or HTTP 404 Not Found if not.</returns>
         [HttpGet]
         [Route("{id}")]
 

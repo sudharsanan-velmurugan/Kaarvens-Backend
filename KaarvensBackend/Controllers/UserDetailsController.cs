@@ -96,7 +96,12 @@ namespace KaarvensBackend.Controllers
             return Ok(updateUser);
         }
 
-       
+        /// <summary>
+        /// Deletes a user by their ID.
+        /// </summary>
+        /// <param name="id">The ID of the user to delete.</param>
+        /// <returns>Returns HTTP 204 No Content if successful, or HTTP 404 Not Found if the user does not exist.</returns>
+        [HttpDelete]
         [Route("{id}")]
         public async Task<IActionResult> Delete(int id)
         {

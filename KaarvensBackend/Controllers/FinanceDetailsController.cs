@@ -94,7 +94,12 @@ namespace KaarvensBackend.Controllers
             return Ok(updatedFD);
         }
 
-       
+        /// <summary>
+        /// Deletes a finance record by ID.
+        /// </summary>
+        /// <param name="id">The ID of the finance record to delete.</param>
+        /// <returns>Returns HTTP 204 No Content if successful, or HTTP 404 Not Found if the record does not exist.</returns>
+        [HttpDelete]
         public async Task<IActionResult> Delete(int id)
         {
             // Find the finance record to delete by ID
